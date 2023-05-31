@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes title {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes rgb {
+  0% {
+    background: red;
+  }
+  50% {
+    background: green;
+  }
+  100% {
+    background: blue;
+  }
+}
+
+.cent {
+  position: absolute;
+  animation: title 1s ease-in-out;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.rgbbar {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: 100px
+}
+
+.rgbcompletion{
+  animation: rgb 1s infinite;
+  width: 100%;
+  height: inherit;
+}

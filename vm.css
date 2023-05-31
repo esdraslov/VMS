@@ -1,0 +1,12 @@
+button {
+  border: none;
+  background-color: green;
+  border-radius: none;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+button:hover {
+  background-color: lightgreen;
+}
