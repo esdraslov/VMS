@@ -19,12 +19,11 @@ newVMS.addEventListener('click', () => {
     localStorage.setItem('vminfo', n)
     console.log(n)
     let virtualMachine = window.open('svm.html', '_blank', 'height=300,width=500')
+    virtualMachine.moveTo((screen.width/3), (screen.height/3))
     let vmo = setInterval(() => {
       if(!virtualMachine.opener){
         clearInterval(vmo)
       }
-      virtualMachine.resizeTo(500, 300)
-      virtualMachine.moveTo((screen.width/3), (screen.height/3))
     })
   }
 })

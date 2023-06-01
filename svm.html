@@ -6,11 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" href="vmsr-icon-16x16.png" type="image/16x16-icon">
+  <link rel="shortcut icon" href="vmsr-icon-32x32.png" type="image/32x32-icon">
+  <link rel="apple-touch-icon" href="vmsr-ati.png">
+  <style>
+    .ist-window {
+      background-color: white;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
   <div class="ist-window">
+    <div class="s1">
+      <h1>install VMS tools</h1>
+      <button class="inst-VMS-tools">
+        <span class="text">
+          install VMS tools
+        </span>
+      </button>
+    </div>
+    <div class="s2" hidden>
+      <h1>install software</h1>
+      <div class="user">
+        <label for="username">username:</label>
+        <input type="text" id="username">
+        <label for="password">password(no requied):</label>
+        <input type="password" id="password">
+      </div>
+    </div>
+    <div class="s3" hidden>
+      <h1>set time</h1>
+      <input type="date">
+      <input type="time">
+      
+    </div>
+    <div class="s4" hidden>
+      <p id="status">making files...</p>
+      <progress max="250" value="0"></progress>
+    </div>
+    <div class="s5" hidden>
+      <h1>installetion finisehd!</h1>
+      now you can use the computer!
+    </div>
     <div class="v">
-      <progress min="0" max="100" value="0">0%</progress>
+      <button class="next">next ></button>
     </div>
   </div>
   
