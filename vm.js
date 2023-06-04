@@ -1,11 +1,18 @@
-let search = document.getElementById('search')
+let vmsave = document.getElementById('vmsave')
 let newVMS = document.querySelector('.new')
+let vmb = document.getElementById('vm')
 
 document.addEventListener('keydown', e => {
-  if(e.metaKey && e.which == 79){
-    let s = prompt('search')
-    search.value = s
-    console.log(s)
+  if(e.ctrlKey && e.which == 79){
+    vmsave.click()
+    vmsave.addEventListener('change', e => {
+      let file = vmsave.files[0];
+      let fr = new FileReader();
+      fr.onload = e => {
+        console.log(e.currentTarget.result)
+      }
+      fr.readAsText(file);
+    })
   }
   if (e.ctrlKey && e.which == 77) {
     newVMS.click()

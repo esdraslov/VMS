@@ -18,7 +18,7 @@ vmsTools.addEventListener('click', () => {
 })
 
 document.addEventListener('keydown', e => {
-  if(e.which == 122){
+  if (e.which == 122) {
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.webkitExitFullscreen) { /* Safari */
@@ -31,11 +31,12 @@ document.addEventListener('keydown', e => {
 
 let step = 1
 nextBtn.addEventListener('click', () => {
-  if(step<5){
+  if (step < 5) {
     document.querySelector(`.s${step}`).hidden = true
     step++
     document.querySelector(`.s${step}`).hidden = false
-  }else{
+  } else {
     document.querySelector('.ist-window').hidden = true
+    document.querySelector('.pc').hidden = false
   }
 })

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,17 @@
   <link rel="shortcut icon" href="vmsr-icon-32x32.png" type="image/32x32-icon">
   <link rel="apple-touch-icon" href="vmsr-ati.png">
   <style>
-    .ist-window {
+    .ist-window, .pc {
       background-color: white;
       width: 100%;
       height: 100%;
     }
+    .ist-window, .pc {
+      cursor: url('./cursor.png'), auto;
+    }
   </style>
 </head>
+
 <body>
   <div class="ist-window">
     <div class="s1">
@@ -40,21 +45,27 @@
       <h1>set time</h1>
       <input type="date">
       <input type="time">
-      
+
     </div>
     <div class="s4" hidden>
       <p id="status">making files...</p>
       <progress max="250" value="0"></progress>
     </div>
     <div class="s5" hidden>
-      <h1>installetion finisehd!</h1>
+      <h1>installetion finished!</h1>
       now you can use the computer!
     </div>
     <div class="v">
       <button class="next">next ></button>
     </div>
   </div>
-  
+  <div class="pc" hidden>
+    <div class="desktop">
+      
+    </div>
+  </div>
+
   <script src="svm.js"></script>
 </body>
+
 </html>

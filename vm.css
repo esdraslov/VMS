@@ -1,4 +1,4 @@
-button {
+button:not(.fup-bar) {
   border: none;
   background-color: green;
   border-radius: none;
@@ -7,6 +7,23 @@ button {
   color: white;
 }
 
-button:hover {
+button:hover:not(.fup-bar) {
   background-color: lightgreen;
+}
+
+.fup-bar {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.up-bar {
+  background: black;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
 }
