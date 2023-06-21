@@ -34,3 +34,7 @@ newVMS.addEventListener('click', () => {
     })
   }
 })
+
+vmb.addEventListener('click', () => {
+  let v = window.open('http://localhost:3000/vmt')
+})
