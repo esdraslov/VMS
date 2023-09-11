@@ -11,6 +11,9 @@
   <link rel="shortcut icon" href="vmsr-icon-32x32.png" type="image/32x32-icon">
   <link rel="apple-touch-icon" href="vmsr-ati.png">
   <style>
+    body {
+      background: black;
+    }
     .ist-window, .pc {
       background-color: white;
       width: 100%;
@@ -18,6 +21,9 @@
     }
     .ist-window, .pc {
       cursor: url('./cursor.png'), auto;
+    }
+    icon, ptitle {
+      display: block;
     }
   </style>
 </head>
@@ -36,9 +42,10 @@
       <h1>install software</h1>
       <div class="user">
         <label for="username">username:</label>
-        <input type="text" id="username">
+        <input type="text" id="username" onkeyup="un.innerText = this.value" value="VMS user">
         <label for="password">password(no requied):</label>
-        <input type="password" id="password">
+        <input type="password" id="password" value="bestpassword" placeholder="e.g.: password">
+        <input type="checkbox" onclick="pt()">show ********(password)
       </div>
     </div>
     <div class="s3" hidden>
@@ -61,11 +68,26 @@
     </div>
   </div>
   <div class="pc" hidden>
+    <div class="bar">
+      <d id="un">VMS user</d>
+      <button class="sd">shutdown</button>
+      <button class="sb">stand by</button>
+      <button class="su">switch user</button>
+      <button class="nf">notifications</button>
+      <button class="ng">navigator</button>
+    </div>
     <div class="desktop">
-      
+      <icon class="mpc">
+        <img src="mp.png" alt="my pc" width="50" height="50">
+        <ptitle>my pc</ptitle>
+      </icon>
+      <icon class="vb">
+        <ptitle>vbrowser</ptitle>
+      </icon>
     </div>
   </div>
 
+  <script src="notif.js">// anyways</script>
   <script src="svm.js"></script>
 </body>
 

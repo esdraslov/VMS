@@ -7,6 +7,9 @@ let nextBtn = document.querySelector('.next')
 let p = document.getElementById("fp")
 let st = document.getElementById("status")
 let pc = document.getElementById("porc")
+let shutd = document.querySelector(".sd")
+let standby = document.querySelector(".sb")
+let notif = document.querySelector(".nt")
 
 title.innerText = vmn
 
@@ -28,6 +31,12 @@ document.addEventListener('keydown', e => {
       document.webkitExitFullscreen();
     } else if (document.msExitFullscreen) { /* IE11 */
       document.msExitFullscreen();
+    }
+  }
+  if (e.which == 91) {
+    if (document.querySelector('.ist-window').hidden && document.querySelector('.pc').hidden) {
+      document.querySelector('.ist-window').hidden = true
+      document.querySelector('.pc').hidden = false
     }
   }
 })
@@ -65,5 +74,28 @@ nextBtn.addEventListener('click', () => {
   } else {
     document.querySelector('.ist-window').hidden = true
     document.querySelector('.pc').hidden = false
+    let wcmsg = notifVS.push("wellcome to VMS!", "use the VHelp ifs need help to use", () => {
+      wcmsg.close()
+    })
   }
 })
+// bar
+shutd.addEventListener("click", () => {
+  window.close()
+})
+standby.addEventListener("click", () => {
+  document.querySelector('.ist-window').hidden = true
+  document.querySelector('.pc').hidden = true
+})
+notif.addEventListener("click", () => {
+  
+})
+
+function pt() {
+  let l = document.getElementById("password")
+  if (l.type == "password") {
+    l.type = "text"
+  } else {
+    l.type = 'password'
+  }
+}
