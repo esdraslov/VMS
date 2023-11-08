@@ -9,7 +9,8 @@ let st = document.getElementById("status")
 let pc = document.getElementById("porc")
 let shutd = document.querySelector(".sd")
 let standby = document.querySelector(".sb")
-let notif = document.querySelector(".nt")
+let notif = document.querySelector(".nf")
+let na = document.querySelector(".notarea")
 
 title.innerText = vmn
 
@@ -88,7 +89,26 @@ standby.addEventListener("click", () => {
   document.querySelector('.pc').hidden = true
 })
 notif.addEventListener("click", () => {
-  
+  let not = na.querySelectorAll("div")
+  not.forEach((notificat) => {
+    document.removeChild(notificat)
+  })
+  if (na.hidden == true) {
+    na.hidden = false
+  } else {
+    na.hidden = true
+  }
+  for (let i = 0;i < notifVSs.length;i++) {
+    let n = document.createElement("div")
+    n.onclick = notifVSs[i].click
+    let title = document.createElement("div")
+    title.innerText = notifVSs[i].title
+    let msg = document.createElement("div")
+    msg.innerText = notifVSs[i].msg
+    na.appendChild(n)
+    n.appendChild(title)
+    n.appendChild(msg)
+  }
 })
 
 function pt() {

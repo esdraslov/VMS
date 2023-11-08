@@ -14,16 +14,39 @@
     body {
       background: black;
     }
-    .ist-window, .pc {
+
+    .ist-window,
+    .pc {
       background-color: white;
       width: 100%;
       height: 100%;
     }
-    .ist-window, .pc {
+
+    .ist-window,
+    .pc {
       cursor: url('./cursor.png'), auto;
     }
-    icon, ptitle {
+
+    icon,
+    ptitle {
       display: block;
+    }
+
+    .v 
+    {
+      display: flex;
+      flex-direction: row;
+    }
+
+
+    .ahp {
+      width: 100%;
+      height: 100%;
+    }
+
+    .ftp {
+      width: 50%;
+      height: 50%;
     }
   </style>
 </head>
@@ -76,14 +99,17 @@
       <button class="nf">notifications</button>
       <button class="ng">navigator</button>
     </div>
-    <div class="desktop">
-      <icon class="mpc">
-        <img src="mp.png" alt="my pc" width="50" height="50">
-        <ptitle>my pc</ptitle>
-      </icon>
-      <icon class="vb">
-        <ptitle>vbrowser</ptitle>
-      </icon>
+    <div class="v">
+      <div class="desktop ahp">
+        <icon class="mpc">
+          <img src="mp.png" alt="my pc" width="50" height="50">
+          <ptitle>my pc</ptitle>
+        </icon>
+        <icon class="vb">
+          <ptitle>vbrowser</ptitle>
+        </icon>
+      </div>
+      <div class="notarea ftp" hidden></div>
     </div>
   </div>
 
