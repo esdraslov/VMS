@@ -22,7 +22,7 @@
   "protocol_handlers": [
     {
       "protocol": "web+vms",
-      "url": "https://vms.esdrasde2.repl.co/svm?vm=%s"
+      "url": "./svm?vm=%s"
     }
   ]
 }
