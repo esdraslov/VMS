@@ -25,7 +25,7 @@ vmsTools.addEventListener('click', () => {
 })
 
 document.addEventListener('keydown', e => {
-  if (e.which == 122) {
+  if (e.key == "F1") {
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.webkitExitFullscreen) { /* Safari */
@@ -34,7 +34,8 @@ document.addEventListener('keydown', e => {
       document.msExitFullscreen();
     }
   }
-  if (e.which == 91) {
+  if (e.key === "Meta") {
+    e.preventDefault()
     if (document.querySelector('.ist-window').hidden && document.querySelector('.pc').hidden) {
       document.querySelector('.ist-window').hidden = true
       document.querySelector('.pc').hidden = false
@@ -42,6 +43,8 @@ document.addEventListener('keydown', e => {
   }
 })
 
+document.querySelector(".s1").hidden = false
+  
 let step = 1
 nextBtn.addEventListener('click', () => {
   if (step < 5) {

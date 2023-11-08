@@ -1,0 +1,1 @@
+navigator.registerProtocolHandler("web+vms", "https://vms.esdraslov.repl.co/svm.html?vm=%s")

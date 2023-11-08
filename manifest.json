@@ -2,7 +2,7 @@
   "name": "virtual machine simulator",
   "short_name": "VMS",
   "description": "the non-exist software virtual machine",
-  "start_url": "https://vms.esdrasde2.repl.co/vm.html",
+  "start_url": "./vm.html",
   "display": "standalone",
   "orientation": "landscape",
   "icons": [
@@ -17,6 +17,12 @@
     {
       "src": "apple-touch-icon.png",
       "sizes": "180x180"
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+vms",
+      "url": "https://vms.esdrasde2.repl.co/svm?vm=%s"
     }
   ]
 }
