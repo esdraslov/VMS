@@ -11,6 +11,24 @@ let shutd = document.querySelector(".sd")
 let standby = document.querySelector(".sb")
 let notif = document.querySelector(".nf")
 let na = document.querySelector(".notarea")
+let records = {
+  "sys": { // read only [apps], full action [system]
+    "time": new Date().toLocaleString(),
+    "date": new Date().toLocaleDateString(),
+    "version": "1.0.0",
+    "main": {
+      "lang": "VM-JS",
+      "name": "virtual machine simulator",
+      "date_format": "dd/mm/yyyy hh:mm p",
+      "secondary_date_format": "dd/mm/YY",
+    }
+  },
+  "prsys": { // full apps actions
+    "protocols": {
+      "vm-painter://": "vm-painter.vme"
+    }
+  }
+}
 
 title.innerText = vmn
 
@@ -25,14 +43,8 @@ vmsTools.addEventListener('click', () => {
 })
 
 document.addEventListener('keydown', e => {
-  if (e.key == "F1") {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) { /* Safari */
-      document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) { /* IE11 */
-      document.msExitFullscreen();
-    }
+  if (e.key == "F11") {
+    e.preventDefault()
   }
   if (e.key === "Meta") {
     e.preventDefault()
@@ -122,3 +134,4 @@ function pt() {
     l.type = 'password'
   }
 }
+
